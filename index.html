@@ -3,36 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#14532d">
-<title>Che pickle | Simulador de pagos</title>
+<meta name="theme-color" content="#d946a6">
+<title>Che pickle 💗 | Simulador de pagos</title>
 <style>
-:root{--bg:#f3f8f4;--ink:#183126;--muted:#64786c;--line:#dce9df;--accent:#168044;--accent2:#116536;--card:#fff}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:linear-gradient(135deg,#123c26,#17683a);color:#fff;padding:28px 20px 68px}
+:root{--bg:#fff3fa;--ink:#48283f;--muted:#896b83;--line:#f1cfe5;--accent:#d946a6;--accent2:#a52d7c;--card:#fff}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#ffe1f1 0,transparent 42%),var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:linear-gradient(135deg,#9b5de5,#d946a6 58%,#f4a7cf);color:#fff;padding:28px 20px 68px}
 .top{max-width:920px;margin:auto;display:flex;align-items:center;gap:13px}
-.logo{width:52px;height:52px;border-radius:17px;background:#fff;color:#168044;display:grid;place-items:center;box-shadow:0 7px 18px #062c1833}
+.logo{width:52px;height:52px;border-radius:17px;background:#fff;color:#d946a6;display:grid;place-items:center;box-shadow:0 7px 18px #6d174d33}
 .logo svg{width:31px;height:31px}
-.brand{font-weight:850;font-size:22px;letter-spacing:-.5px}.tag{font-size:13px;color:#d3ead9}
-.hero{max-width:920px;margin:32px auto 0}.eyebrow{color:#a9e6bb;font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-1.4px;margin:10px 0}.hero p{max-width:560px;color:#d3ead9;margin:12px 0 0}
+.brand{font-weight:850;font-size:22px;letter-spacing:-.5px}.tag{font-size:13px;color:#ffe5f3}
+.hero{max-width:920px;margin:32px auto 0}.eyebrow{color:#ffe0f1;font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-1.4px;margin:10px 0}.hero p{max-width:560px;color:#ffe5f3;margin:12px 0 0}
 main{max-width:920px;margin:-38px auto 0;padding:0 16px 38px}
 .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 35px #123c2610}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 35px #a52d7c12}
 h2{font-size:18px;margin:0 0 6px;letter-spacing:-.3px}.sub{font-size:13px;color:var(--muted);margin:0 0 20px}
 .methods{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0 22px}
-.method{border:1px solid var(--line);border-radius:14px;padding:13px 6px;background:#fff;color:var(--ink);cursor:pointer;font:inherit;text-align:center;transition:.15s}
+.method{border:1px solid var(--line);border-radius:14px;padding:13px 6px;background:#fff9fd;color:var(--ink);cursor:pointer;font:inherit;text-align:center;transition:.15s}
 .method .ico{display:block;font-size:23px;margin-bottom:5px}.method span:last-child{font-size:13px;font-weight:750}
-.method.active{border:2px solid var(--accent);background:#effaf2;color:var(--accent2);padding:12px 5px}
+.method.active{border:2px solid var(--accent);background:#ffebf6;color:var(--accent2);padding:12px 5px;box-shadow:0 0 0 3px #d946a615}
+.method[data-method="credit"] .ico{text-shadow:0 0 4px #fff,0 0 8px #f4a7cf,0 0 14px #c084fc;filter:drop-shadow(0 0 2px #e7b5ff)}
 label{display:block;font-size:13px;font-weight:750;margin:15px 0 7px}
-input,select{width:100%;border:1px solid #d2e1d6;border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);background:white;outline:none}
-input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #16804418}
+input,select{width:100%;border:1px solid #e8c1dc;border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);background:white;outline:none}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #d946a618}
 .input-wrap{position:relative}.currency{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:750}.input-wrap input{padding-left:42px}
 .hidden{display:none!important}
-.result{background:linear-gradient(145deg,#15482c,#207344);color:white;border-radius:18px;padding:22px;margin-top:16px}
-.result .small{color:#d0ead8;font-size:13px}.total{font-size:clamp(30px,5vw,38px);font-weight:850;letter-spacing:-1px;margin:4px 0 18px;overflow-wrap:anywhere}
-.rowline{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #ffffff30;font-size:13px}.rowline strong{white-space:nowrap}
-.note{background:#f7fbf8;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;color:var(--muted);margin-top:15px}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;background:#e4f6e9;color:#146333;padding:6px 10px;font-size:11px;font-weight:850;letter-spacing:.4px;text-transform:uppercase}
+.result{background:linear-gradient(145deg,#8f5bd7,#d946a6 65%,#ed91c5);color:white;border-radius:18px;padding:22px;margin-top:16px;box-shadow:inset 0 1px 0 #ffffff55}
+.result .small{color:#fff0fa;font-size:13px}.total{font-size:clamp(30px,5vw,38px);font-weight:850;letter-spacing:-1px;margin:4px 0 18px;overflow-wrap:anywhere}
+.rowline{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #ffffff45;font-size:13px}.rowline strong{white-space:nowrap}
+.note{background:#fff5fb;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;color:var(--muted);margin-top:15px}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;background:#f8def0;color:#9b2675;padding:6px 10px;font-size:11px;font-weight:850;letter-spacing:.4px;text-transform:uppercase}
 .side-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
 @media(max-width:700px){header{padding-bottom:58px}.hero{margin-top:26px}.layout{grid-template-columns:1fr}.panel{padding:20px}.result{margin-top:12px}}
@@ -63,9 +64,9 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
       <h2>Simulá tu compra</h2>
       <p class="sub">Completá los datos para ver el cálculo al instante.</p>
       <div class="methods" role="group" aria-label="Medio de pago">
-        <button class="method active" data-method="cash" aria-pressed="true"><span class="ico">💵</span><span>Efectivo</span></button>
+        <button class="method active" data-method="cash" aria-pressed="true"><span class="ico">💗💵</span><span>Efectivo</span></button>
         <button class="method" data-method="debit" aria-pressed="false"><span class="ico">💳</span><span>Débito</span></button>
-        <button class="method" data-method="credit" aria-pressed="false"><span class="ico">▤</span><span>Crédito</span></button>
+        <button class="method" data-method="credit" aria-pressed="false"><span class="ico">💳✨</span><span>Crédito</span></button>
       </div>
       <label for="amount">Importe de la compra</label>
       <div class="input-wrap"><span class="currency">$</span><input id="amount" type="number" min="0" step="0.01" value="10000" inputmode="decimal"></div>
@@ -84,7 +85,8 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
         <div class="small">Total simulado</div>
         <div class="total" id="grandTotal">$ 10.000,00</div>
         <div class="rowline"><span>Importe original</span><strong id="baseAmount">$ 10.000,00</strong></div>
-        <div class="rowline"><span id="rateLabel">Ajuste simulado (0%)</span><strong id="extraAmount">$ 0,00</strong></div>
+        <div class="rowline"><span id="rateLabel">Recargo simulado (0%)</span><strong id="extraAmount">$ 0,00</strong></div>
+        <div class="rowline"><span>IVA incluido (21%)</span><strong id="ivaAmount">$ 0,00</strong></div>
         <div class="rowline hidden" id="installmentLine"><span>Valor aproximado por cuota</span><strong id="installmentAmount">$ 0,00</strong></div>
       </div>
       <div class="note" id="explain">En este ejemplo, el efectivo no tiene ajuste adicional.</div>
@@ -97,7 +99,7 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
    Tasas ficticias de ejemplo por medio y cantidad de cuotas. */
 const SETTINGS = {
   brandName: "Che pickle",
-  rates: { cash: 0, debit: 2, credit: {1: 3, 3: 8, 6: 14, 9: 20, 12: 27} }
+  rates: { cash: 0, debit: 15, credit: {1: 30, 3: 30, 6: 30, 9: 30, 12: 30} }
 };
 document.getElementById("brandName").textContent = SETTINGS.brandName;
 let method = "cash";
@@ -110,15 +112,18 @@ function render(){
   const rate = method === "credit" ? SETTINGS.rates.credit[n] : SETTINGS.rates[method];
   const extra = base * rate / 100;
   const total = base + extra;
+  // El IVA se muestra como parte incluida en el total final, no se suma nuevamente.
+  const iva = total - (total / 1.21);
+  document.getElementById("ivaAmount").textContent = fmt(iva);
   document.getElementById("grandTotal").textContent = fmt(total);
   document.getElementById("baseAmount").textContent = fmt(base);
   document.getElementById("extraAmount").textContent = fmt(extra);
-  document.getElementById("rateLabel").textContent = `Ajuste simulado (${rate}%)`;
+  document.getElementById("rateLabel").textContent = `Recargo simulado (${rate}%)`;
   document.getElementById("methodSummary").textContent = method === "cash" ? "Pago en efectivo" : method === "debit" ? "Pago con tarjeta de débito" : `Pago con tarjeta de crédito · ${n} ${n===1?"cuota":"cuotas"}`;
   document.getElementById("installmentsWrap").classList.toggle("hidden", method !== "credit");
   document.getElementById("installmentLine").classList.toggle("hidden", method !== "credit");
   document.getElementById("installmentAmount").textContent = fmt(total/n);
-  document.getElementById("explain").textContent = method === "cash" ? "En este ejemplo, el efectivo no tiene ajuste adicional." : method === "debit" ? `Se aplicó un porcentaje ficticio del ${rate}% para practicar el cálculo.` : `Se aplicó un porcentaje ficticio del ${rate}% para ${n} ${n===1?"cuota":"cuotas"}. El total se divide en partes iguales solo a modo ilustrativo.`;
+  document.getElementById("explain").textContent = method === "cash" ? "El efectivo no tiene recargo. El IVA (21%) se muestra desglosado como parte del total, sin sumarse dos veces." : method === "debit" ? `Se aplicó un recargo simulado del ${rate}%. El IVA (21%) se calcula sobre el total final y ya está incluido en ese importe.` : `Se aplicó un recargo simulado del ${rate}% para ${n} ${n===1?"cuota":"cuotas"}. El IVA (21%) está incluido en el total final; las cuotas se dividen en partes iguales a modo ilustrativo.`;
 }
 document.querySelectorAll(".method").forEach(btn => btn.addEventListener("click",()=>{
   method=btn.dataset.method;
