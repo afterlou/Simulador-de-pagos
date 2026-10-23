@@ -3,40 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#d946a6">
-<title>Che pickle 💗 | Simulador de pagos</title>
+<meta name="theme-color" content="#f8dce9">
+<title>Simulador de pagos | Almirón Lourdes</title>
 <style>
-:root{--bg:#fff3fa;--ink:#48283f;--muted:#896b83;--line:#f1cfe5;--accent:#d946a6;--accent2:#a52d7c;--card:#fff}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top left,#ffe1f1 0,transparent 42%),var(--bg);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
-header{background:linear-gradient(135deg,#9b5de5,#d946a6 58%,#f4a7cf);color:#fff;padding:28px 20px 68px}
-.top{max-width:920px;margin:auto;display:flex;align-items:center;gap:13px}
-.logo{width:52px;height:52px;border-radius:17px;background:#fff;color:#d946a6;display:grid;place-items:center;box-shadow:0 7px 18px #6d174d33}
+:root{--bg:#fff0f6;--ink:#493344;--muted:#8e7485;--line:#f0d4e2;--accent:#c65c96;--accent2:#994675;--card:#fffafd}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(145deg,#fff5f9 0%,#fdeaf3 52%,#fff1f8 100%);color:var(--ink);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{background:linear-gradient(125deg,#b987cf 0%,#d58bb5 52%,#edb1cc 100%);color:#fff;padding:28px 20px 68px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(circle at 15% 20%,#ffffffa6 0 1px,transparent 2px),radial-gradient(circle at 76% 35%,#fff9 0 1px,transparent 2px),radial-gradient(circle at 88% 72%,#ffffffb3 0 1px,transparent 2px),radial-gradient(circle at 47% 82%,#fff8 0 1px,transparent 2px);background-size:110px 90px,150px 130px,120px 100px,180px 140px;opacity:.8}
+.top,.hero{position:relative;z-index:1}.top{max-width:920px;margin:auto;display:flex;align-items:center;gap:13px}
+.logo{width:52px;height:52px;border-radius:17px;background:#fff8fc;color:#b45c91;display:grid;place-items:center;box-shadow:0 7px 18px #6d174d20;border:1px solid #fff9}
 .logo svg{width:31px;height:31px}
-.brand{font-weight:850;font-size:22px;letter-spacing:-.5px}.tag{font-size:13px;color:#ffe5f3}
-.hero{max-width:920px;margin:32px auto 0}.eyebrow{color:#ffe0f1;font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
-h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-1.4px;margin:10px 0}.hero p{max-width:560px;color:#ffe5f3;margin:12px 0 0}
+.brand{font-weight:850;font-size:22px;letter-spacing:-.5px}.tag{font-size:13px;color:#fff0f8}
+.hero{max-width:920px;margin:32px auto 0}.eyebrow{color:#fff1f8;font-weight:750;font-size:12px;letter-spacing:1.5px;text-transform:uppercase}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.1;letter-spacing:-1.4px;margin:10px 0}.hero p{max-width:560px;color:#fff4fa;margin:12px 0 0}
 main{max-width:920px;margin:-38px auto 0;padding:0 16px 38px}
 .layout{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
-.panel{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 35px #a52d7c12}
+.panel{background:rgba(255,250,253,.96);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 35px #a52d7c0b}
 h2{font-size:18px;margin:0 0 6px;letter-spacing:-.3px}.sub{font-size:13px;color:var(--muted);margin:0 0 20px}
 .methods{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:16px 0 22px}
-.method{border:1px solid var(--line);border-radius:14px;padding:13px 6px;background:#fff9fd;color:var(--ink);cursor:pointer;font:inherit;text-align:center;transition:.15s}
-.method .ico{display:block;font-size:23px;margin-bottom:5px}.method span:last-child{font-size:13px;font-weight:750}
-.method.active{border:2px solid var(--accent);background:#ffebf6;color:var(--accent2);padding:12px 5px;box-shadow:0 0 0 3px #d946a615}
-.method[data-method="credit"] .ico{text-shadow:0 0 4px #fff,0 0 8px #f4a7cf,0 0 14px #c084fc;filter:drop-shadow(0 0 2px #e7b5ff)}
+.method{border:1px solid var(--line);border-radius:14px;padding:13px 6px;background:#fffafd;color:var(--ink);cursor:pointer;font:inherit;text-align:center;transition:.15s}
+.method .ico{display:block;font-size:23px;margin-bottom:5px;color:#bd6b9d}
+.method .ico svg{width:27px;height:27px;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.method span:last-child{font-size:13px;font-weight:750}
+.method.active{border:1.5px solid var(--accent);background:#ffedf5;color:var(--accent2);padding:12.5px 5.5px;box-shadow:0 0 0 3px #d946a610,0 5px 14px #c65c9610}
+.method[data-method="credit"]{position:relative}
+.method[data-method="credit"]:after{content:"";position:absolute;inset:0;border-radius:13px;pointer-events:none;background:linear-gradient(115deg,transparent 25%,#fff9 43%,transparent 55%);opacity:.65}
 label{display:block;font-size:13px;font-weight:750;margin:15px 0 7px}
-input,select{width:100%;border:1px solid #e8c1dc;border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);background:white;outline:none}
-input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #d946a618}
+input,select{width:100%;border:1px solid #e8c1d8;border-radius:12px;padding:13px 14px;font:inherit;color:var(--ink);background:#fffafd;outline:none}
+input:focus,select:focus{border-color:var(--accent);box-shadow:0 0 0 3px #c65c9618}
 .input-wrap{position:relative}.currency{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted);font-weight:750}.input-wrap input{padding-left:42px}
 .hidden{display:none!important}
-.result{background:linear-gradient(145deg,#8f5bd7,#d946a6 65%,#ed91c5);color:white;border-radius:18px;padding:22px;margin-top:16px;box-shadow:inset 0 1px 0 #ffffff55}
+.result{background:linear-gradient(145deg,#9d72bc,#c67aa8 62%,#df9fbe);color:white;border:1px solid #ffffff80;border-radius:18px;padding:22px;margin-top:16px;box-shadow:inset 0 1px 0 #ffffff80,0 8px 20px #b45c9117;position:relative;overflow:hidden}
+.result:after{content:"";position:absolute;top:-35%;left:-50%;width:45%;height:170%;transform:rotate(24deg);background:linear-gradient(90deg,transparent,#ffffff25,transparent);pointer-events:none}
 .result .small{color:#fff0fa;font-size:13px}.total{font-size:clamp(30px,5vw,38px);font-weight:850;letter-spacing:-1px;margin:4px 0 18px;overflow-wrap:anywhere}
 .rowline{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid #ffffff45;font-size:13px}.rowline strong{white-space:nowrap}
-.note{background:#fff5fb;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;color:var(--muted);margin-top:15px}
-.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;background:#f8def0;color:#9b2675;padding:6px 10px;font-size:11px;font-weight:850;letter-spacing:.4px;text-transform:uppercase}
+.note{background:#fff3f8;border:1px solid var(--line);border-radius:12px;padding:12px;font-size:12px;color:var(--muted);margin-top:15px}
+.badge{display:inline-flex;align-items:center;gap:6px;border-radius:99px;background:#f8e5f0;color:#994675;padding:6px 10px;font-size:11px;font-weight:850;letter-spacing:.4px;text-transform:uppercase}
 .side-title{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
-@media(max-width:700px){header{padding-bottom:58px}.hero{margin-top:26px}.layout{grid-template-columns:1fr}.panel{padding:20px}.result{margin-top:12px}}
+.discount-panel{margin-top:18px}
+.discount-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.discount-result{margin-top:0}
+.watermark{margin-top:7px;font-size:11px;letter-spacing:.8px;opacity:.58;color:#ad8da0}
+@media(max-width:700px){header{padding-bottom:58px}.hero{margin-top:26px}.layout,.discount-grid{grid-template-columns:1fr}.panel{padding:20px}.result{margin-top:12px}.discount-result{margin-top:0}.methods{gap:6px}.method{padding:11px 4px}.method span:last-child{font-size:12px}}
 </style>
 </head>
 <body>
@@ -64,19 +74,31 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
       <h2>Simulá tu compra</h2>
       <p class="sub">Completá los datos para ver el cálculo al instante.</p>
       <div class="methods" role="group" aria-label="Medio de pago">
-        <button class="method active" data-method="cash" aria-pressed="true"><span class="ico">💗💵</span><span>Efectivo</span></button>
-        <button class="method" data-method="debit" aria-pressed="false"><span class="ico">💳</span><span>Débito</span></button>
-        <button class="method" data-method="credit" aria-pressed="false"><span class="ico">💳✨</span><span>Crédito</span></button>
+        <button class="method active" data-method="cash" aria-pressed="true"><span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="7" width="26" height="18" rx="3"/><circle cx="16" cy="16" r="5"/><path d="M7 11h2M23 21h2"/><path d="M16 13.5c-2.8 2.5-2.8 4.5 0 5.5 2.8-1 2.8-3 0-5.5" stroke="#c65c96"/></svg></span><span>Efectivo</span></button>
+        <button class="method" data-method="debit" aria-pressed="false"><span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="20" rx="4"/><path d="M4 12h24M8 20h6"/></svg></span><span>Débito</span></button>
+        <button class="method" data-method="credit" aria-pressed="false"><span class="ico" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="6" width="26" height="20" rx="4"/><path d="M4 12h24M8 20h6"/><path d="m23 15 .9 2.1L26 18l-2.1.9L23 21l-.9-2.1L20 18l2.1-.9z" fill="#d8a4ce" stroke="#bd6b9d"/></svg></span><span>Crédito</span></button>
       </div>
       <label for="amount">Importe de la compra</label>
       <div class="input-wrap"><span class="currency">$</span><input id="amount" type="number" min="0" step="0.01" value="10000" inputmode="decimal"></div>
+      <div id="surchargeWrap">
+        <label for="surcharge">Recargo que aplica el local</label>
+        <select id="surcharge">
+          <option value="0">Sin recargo (0%)</option>
+          <option value="10">10%</option>
+          <option value="20" selected>20%</option>
+          <option value="30">30%</option>
+          <option value="40">40%</option>
+          <option value="50">50%</option>
+        </select>
+        <p class="sub" style="margin:6px 0 0">Elegí el porcentaje según las condiciones del comercio.</p>
+      </div>
       <div id="installmentsWrap" class="hidden">
         <label for="installments">Cantidad de cuotas</label>
         <select id="installments">
           <option value="1">1 cuota</option><option value="3">3 cuotas</option><option value="6" selected>6 cuotas</option><option value="9">9 cuotas</option><option value="12">12 cuotas</option>
         </select>
       </div>
-      <div class="note">🧪 <strong>Modo educativo:</strong> los porcentajes de esta página son ejemplos ficticios y no representan condiciones reales de ningún banco, tarjeta o comercio.</div>
+      <div class="note"><strong>Importante:</strong> el recargo es una simulación que elegís manualmente. No representa una tasa real de bancos, tarjetas o comercios.</div>
     </section>
     <section class="panel">
       <div class="side-title"><h2>Resumen estimado</h2><span class="badge">Demo</span></div>
@@ -86,30 +108,97 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:0 16px 28px}
         <div class="total" id="grandTotal">$ 10.000,00</div>
         <div class="rowline"><span>Importe original</span><strong id="baseAmount">$ 10.000,00</strong></div>
         <div class="rowline"><span id="rateLabel">Recargo simulado (0%)</span><strong id="extraAmount">$ 0,00</strong></div>
-        <div class="rowline"><span>IVA incluido (21%)</span><strong id="ivaAmount">$ 0,00</strong></div>
+        <div class="rowline"><span>IVA estimado incluido (21%*)</span><strong id="ivaAmount">$ 0,00</strong></div>
         <div class="rowline hidden" id="installmentLine"><span>Valor aproximado por cuota</span><strong id="installmentAmount">$ 0,00</strong></div>
       </div>
       <div class="note" id="explain">En este ejemplo, el efectivo no tiene ajuste adicional.</div>
+      <div class="note">*IVA estimado como parte incluida en el total, suponiendo una alícuota del 21%. Es un ejemplo educativo: el simulador no verifica el tratamiento fiscal real del producto o comercio.</div>
     </section>
   </div>
+
+
+  <section class="panel discount-panel" id="comparisonPanel" aria-labelledby="comparisonTitle">
+    <h2 id="comparisonTitle">Compará los medios de pago</h2>
+    <p class="sub">Ingresá un precio y elegí las condiciones que te ofrece el comercio para cada medio de pago. Cada opción se calcula por separado.</p>
+    <label for="comparePrice">Precio original para comparar</label>
+    <div class="input-wrap"><span class="currency">$</span><input id="comparePrice" type="number" min="0" step="0.01" value="10000" inputmode="decimal"></div>
+    <div class="discount-grid" style="margin-top:14px">
+      <div><label for="compareDebitRate">Recargo con débito</label><select id="compareDebitRate">
+        <option value="0">Sin recargo (0%)</option><option value="10">10%</option><option value="20" selected>20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option>
+      </select></div>
+      <div><label for="compareCreditRate">Recargo con crédito</label><select id="compareCreditRate">
+        <option value="0">Sin recargo (0%)</option><option value="10">10%</option><option value="20" selected>20%</option><option value="30">30%</option><option value="40">40%</option><option value="50">50%</option>
+      </select></div>
+    </div>
+    <label for="compareInstallments">Cuotas con crédito</label>
+    <select id="compareInstallments"><option value="1">1 cuota</option><option value="3">3 cuotas</option><option value="6" selected>6 cuotas</option><option value="9">9 cuotas</option><option value="12">12 cuotas</option></select>
+    <div class="discount-grid" style="margin-top:18px">
+      <div class="result" style="margin-top:0">
+        <div class="small">Efectivo · 0% de recargo</div><div class="total" id="compareCashTotal">$ 10.000,00</div>
+        <div class="rowline"><span>IVA incluido estimado*</span><strong id="compareCashIva">$ 1.735,54</strong></div>
+        <div class="rowline"><span>Ajuste</span><strong>$ 0,00</strong></div>
+      </div>
+      <div class="result" style="margin-top:0">
+        <div class="small" id="compareDebitLabel">Débito · recargo 20%</div><div class="total" id="compareDebitTotal">$ 12.000,00</div>
+        <div class="rowline"><span>Recargo</span><strong id="compareDebitExtra">$ 2.000,00</strong></div>
+        <div class="rowline"><span>IVA incluido estimado*</span><strong id="compareDebitIva">$ 2.082,64</strong></div>
+      </div>
+      <div class="result" style="margin-top:0;grid-column:1/-1">
+        <div class="small" id="compareCreditLabel">Crédito · recargo 20%</div><div class="total" id="compareCreditTotal">$ 12.000,00</div>
+        <div class="rowline"><span>Recargo</span><strong id="compareCreditExtra">$ 2.000,00</strong></div>
+        <div class="rowline"><span>IVA incluido estimado*</span><strong id="compareCreditIva">$ 2.082,64</strong></div>
+        <div class="rowline"><span id="compareCreditInstallmentLabel">Valor aproximado por cuota (6)</span><strong id="compareCreditInstallment">$ 2.000,00</strong></div>
+      </div>
+    </div>
+    <div class="note" id="compareBest">La opción con menor total aparecerá indicada aquí.</div>
+    <div class="note">*Estimación educativa suponiendo que el precio final incluye IVA al 21%. La alícuota y el tratamiento real dependen del producto, la operación y la normativa aplicable. Los recargos se ingresan manualmente y no representan tarifas reales.</div>
+  </section>
+
+  <section class="panel discount-panel" aria-labelledby="discountTitle">
+    <h2 id="discountTitle">Calculadora de descuentos</h2>
+    <p class="sub">Usá este apartado para saber cuánto ahorrarías en un producto. No modifica el cálculo de medios de pago.</p>
+    <div class="discount-grid">
+      <div>
+        <label for="discountPrice">Precio original del producto</label>
+        <div class="input-wrap"><span class="currency">$</span><input id="discountPrice" type="number" min="0" step="0.01" value="10000" inputmode="decimal"></div>
+        <label for="discountRate">Descuento aplicado</label>
+        <select id="discountRate">
+          <option value="10">10% de descuento</option>
+          <option value="20" selected>20% de descuento</option>
+          <option value="30">30% de descuento</option>
+          <option value="40">40% de descuento</option>
+          <option value="50">50% de descuento</option>
+        </select>
+        <p class="sub" style="margin:8px 0 0">El descuento se resta del precio original.</p>
+      </div>
+      <div class="discount-result result" aria-live="polite">
+        <div class="small">Precio final con descuento</div>
+        <div class="total" id="discountFinal">$ 8.000,00</div>
+        <div class="rowline"><span>Precio original</span><strong id="discountOriginal">$ 10.000,00</strong></div>
+        <div class="rowline"><span id="discountLabel">Descuento (20%)</span><strong id="discountSaved">−$ 2.000,00</strong></div>
+      </div>
+    </div>
+    <div class="note">Diferencia importante: un <strong>recargo</strong> se suma al precio; un <strong>descuento</strong> se resta. Cada calculadora funciona por separado para evitar confusiones.</div>
+  </section>
 </main>
-<footer>Che pickle · Simulador educativo · No procesa pagos ni solicita información financiera.</footer>
+<footer>Simulador educativo · No procesa pagos ni solicita información financiera.<div class="watermark">Almirón Lourdes</div></footer>
 <script>
 /* EDITÁ ESTOS VALORES PARA PERSONALIZAR LA SIMULACIÓN.
    Tasas ficticias de ejemplo por medio y cantidad de cuotas. */
 const SETTINGS = {
-  brandName: "Che pickle",
-  rates: { cash: 0, debit: 15, credit: {1: 30, 3: 30, 6: 30, 9: 30, 12: 30} }
+  brandName: "Simulador de pagos",
+  rates: { cash: 0, debit: 20, credit: {1: 20, 3: 20, 6: 20, 9: 20, 12: 20} }
 };
 document.getElementById("brandName").textContent = SETTINGS.brandName;
 let method = "cash";
 const amountEl = document.getElementById("amount");
 const installmentsEl = document.getElementById("installments");
+const surchargeEl = document.getElementById("surcharge");
 const fmt = n => new Intl.NumberFormat("es-AR",{style:"currency",currency:"ARS",minimumFractionDigits:2}).format(n);
 function render(){
   const base = Math.max(0, Number(amountEl.value) || 0);
   const n = Number(installmentsEl.value);
-  const rate = method === "credit" ? SETTINGS.rates.credit[n] : SETTINGS.rates[method];
+  const rate = method === "cash" ? 0 : Number(surchargeEl.value);
   const extra = base * rate / 100;
   const total = base + extra;
   // El IVA se muestra como parte incluida en el total final, no se suma nuevamente.
@@ -122,15 +211,73 @@ function render(){
   document.getElementById("methodSummary").textContent = method === "cash" ? "Pago en efectivo" : method === "debit" ? "Pago con tarjeta de débito" : `Pago con tarjeta de crédito · ${n} ${n===1?"cuota":"cuotas"}`;
   document.getElementById("installmentsWrap").classList.toggle("hidden", method !== "credit");
   document.getElementById("installmentLine").classList.toggle("hidden", method !== "credit");
+  document.getElementById("surchargeWrap").classList.toggle("hidden", method === "cash");
   document.getElementById("installmentAmount").textContent = fmt(total/n);
-  document.getElementById("explain").textContent = method === "cash" ? "El efectivo no tiene recargo. El IVA (21%) se muestra desglosado como parte del total, sin sumarse dos veces." : method === "debit" ? `Se aplicó un recargo simulado del ${rate}%. El IVA (21%) se calcula sobre el total final y ya está incluido en ese importe.` : `Se aplicó un recargo simulado del ${rate}% para ${n} ${n===1?"cuota":"cuotas"}. El IVA (21%) está incluido en el total final; las cuotas se dividen en partes iguales a modo ilustrativo.`;
+  document.getElementById("explain").textContent = method === "cash" ? "El efectivo no tiene recargo. El IVA se estima como parte incluida en el total, suponiendo una alícuota del 21%; no se suma dos veces." : method === "debit" ? `Se aplicó un recargo simulado del ${rate}%. El IVA se estima como parte incluida en el total final, suponiendo una alícuota del 21%.` : `Se aplicó un recargo simulado del ${rate}% para ${n} ${n===1?"cuota":"cuotas"}. El IVA se estima como parte incluida en el total final, suponiendo una alícuota del 21%; las cuotas se dividen en partes iguales a modo ilustrativo.`;
 }
 document.querySelectorAll(".method").forEach(btn => btn.addEventListener("click",()=>{
   method=btn.dataset.method;
   document.querySelectorAll(".method").forEach(b=>{const active=b===btn;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active));});
   render();
 }));
-amountEl.addEventListener("input",render);installmentsEl.addEventListener("change",render);render();
+amountEl.addEventListener("input",render);installmentsEl.addEventListener("change",render);surchargeEl.addEventListener("change",render);render();
+
+
+const comparePriceEl = document.getElementById("comparePrice");
+const compareDebitRateEl = document.getElementById("compareDebitRate");
+const compareCreditRateEl = document.getElementById("compareCreditRate");
+const compareInstallmentsEl = document.getElementById("compareInstallments");
+function renderComparison(){
+  const base = Math.max(0, Number(comparePriceEl.value) || 0);
+  const debitRate = Number(compareDebitRateEl.value) || 0;
+  const creditRate = Number(compareCreditRateEl.value) || 0;
+  const installments = Number(compareInstallmentsEl.value) || 1;
+  const debitExtra = base * debitRate / 100;
+  const debitTotal = base + debitExtra;
+  const creditExtra = base * creditRate / 100;
+  const creditTotal = base + creditExtra;
+  // Estimación de IVA incluido: supone que el total ya contiene IVA al 21%.
+  const includedIva = total => total - (total / 1.21);
+  document.getElementById("compareCashTotal").textContent = fmt(base);
+  document.getElementById("compareCashIva").textContent = fmt(includedIva(base));
+  document.getElementById("compareDebitLabel").textContent = `Débito · recargo ${debitRate}%`;
+  document.getElementById("compareDebitTotal").textContent = fmt(debitTotal);
+  document.getElementById("compareDebitExtra").textContent = fmt(debitExtra);
+  document.getElementById("compareDebitIva").textContent = fmt(includedIva(debitTotal));
+  document.getElementById("compareCreditLabel").textContent = `Crédito · recargo ${creditRate}%`;
+  document.getElementById("compareCreditTotal").textContent = fmt(creditTotal);
+  document.getElementById("compareCreditExtra").textContent = fmt(creditExtra);
+  document.getElementById("compareCreditIva").textContent = fmt(includedIva(creditTotal));
+  document.getElementById("compareCreditInstallmentLabel").textContent = `Valor aproximado por cuota (${installments})`;
+  document.getElementById("compareCreditInstallment").textContent = fmt(creditTotal / installments);
+  const choices = [{name:"efectivo",total:base},{name:"débito",total:debitTotal},{name:"crédito",total:creditTotal}];
+  const minimum = Math.min(...choices.map(item => item.total));
+  const cheapest = choices.filter(item => Math.abs(item.total-minimum) < 0.005).map(item => item.name);
+  document.getElementById("compareBest").textContent = cheapest.length === 1
+    ? `Con estas condiciones, la opción de menor total es ${cheapest[0]} (${fmt(minimum)}).`
+    : `Con estas condiciones, hay empate entre ${cheapest.join(" y ")} (${fmt(minimum)}).`;
+}
+[comparePriceEl,compareDebitRateEl,compareCreditRateEl,compareInstallmentsEl].forEach(el => {
+  el.addEventListener("input",renderComparison);
+  el.addEventListener("change",renderComparison);
+});
+renderComparison();
+
+const discountPriceEl = document.getElementById("discountPrice");
+const discountRateEl = document.getElementById("discountRate");
+function renderDiscount(){
+  const price = Math.max(0, Number(discountPriceEl.value) || 0);
+  const rate = Number(discountRateEl.value) || 0;
+  const saved = price * rate / 100;
+  const finalPrice = price - saved;
+  document.getElementById("discountOriginal").textContent = fmt(price);
+  document.getElementById("discountLabel").textContent = `Descuento (${rate}%)`;
+  document.getElementById("discountSaved").textContent = "−" + fmt(saved);
+  document.getElementById("discountFinal").textContent = fmt(finalPrice);
+}
+discountPriceEl.addEventListener("input", renderDiscount);
+discountRateEl.addEventListener("change", renderDiscount);
+renderDiscount();
 </script>
 </body>
 </html>
